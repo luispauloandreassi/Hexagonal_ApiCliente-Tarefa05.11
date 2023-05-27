@@ -15,17 +15,20 @@ namespace Umfg.Repositorio.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Produto",
+                name: "Cliente",
                 columns: table => new
                 {
                     ID = table.Column<Guid>(type: "char(36)", nullable: false),
-                    DS_PRODUTO = table.Column<string>(type: "longtext", nullable: false),
-                    CD_BARRA = table.Column<string>(type: "longtext", nullable: false),
-                    VL_PRODUTO = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    DOCUMENTO = table.Column<string>(type: "longtext", nullable: false),
+                    NOME = table.Column<string>(type: "longtext", nullable: false),
+                    ENDERECO = table.Column<string>(type: "longtext", nullable: false),
+                    CELULAR = table.Column<string>(type: "longtext", nullable: false),
+                    EMAIL = table.Column<string>(type: "longtext", nullable: false),
+                    OBSERVACAO = table.Column<string>(type: "longtext", nullable: false),
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Produto", x => x.ID);
+                    table.PrimaryKey("PK_Cliente", x => x.ID);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
         }
@@ -34,7 +37,7 @@ namespace Umfg.Repositorio.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Produto");
+                name: "Cliente");
         }
     }
 }

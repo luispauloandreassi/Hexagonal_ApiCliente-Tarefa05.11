@@ -7,10 +7,10 @@ using Umfg.Dominio.Entidades;
 
 namespace Umfg.Dominio.Interfaces
 {
-    public interface IProdutoRepositorio
+    public interface IClienteRepositorio
     {
-        void Adicionar(Produto produto);
-        void Remover(Produto produto);
-        List<Produto> ObterTodos();
+        void Adicionar(Cliente cliente);
+        void Remover(Cliente cliente);
+        List<Cliente> ObterTodos();
     }
 }

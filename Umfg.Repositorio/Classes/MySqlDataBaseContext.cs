@@ -23,7 +23,7 @@ namespace Umfg.Repositorio.Classes
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new MapeamentoProduto());
+            modelBuilder.ApplyConfiguration(new MapeamentoClienteo());
 
             base.OnModelCreating(modelBuilder);
         }

@@ -29,7 +29,7 @@ namespace Umfg.WebApi
             });
 
             builder.Services.AddDbContext<MySqlDataBaseContext>(options
-                => options.UseMySQL(@"Server=127.0.0.1;Port=3306;User Id=root;Password=root;Database=umfgdb"),
+                => options.UseMySQL(@"Server=127.0.0.1;Port=3306;User Id=admin;Password=;Database=umfgdb"),
                 ServiceLifetime.Singleton);
 
             Installer.Dependecy(ref _container);

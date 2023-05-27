@@ -9,28 +9,28 @@ using Umfg.Dominio.Interfaces;
 
 namespace Umfg.Repositorio.Classes
 {
-    public sealed class ProdutoRepositorio : IProdutoRepositorio
+    public sealed class ClienteRepositorio : IClienteRepositorio
     {
         private readonly MySqlDataBaseContext _dataBaseContext;
 
-        private DbSet<Produto> Produtos => _dataBaseContext.Set<Produto>();
+        private DbSet<Cliente> Produtos => _dataBaseContext.Set<Cliente>();
 
-        public ProdutoRepositorio(MySqlDataBaseContext dataBaseContext)
+        public ClienteRepositorio(MySqlDataBaseContext dataBaseContext)
         {
             _dataBaseContext = dataBaseContext;
         }
 
-        public void Adicionar(Produto produto)
+        public void Adicionar(Cliente produto)
         {
             Produtos.Add(produto);
         }
 
-        public List<Produto> ObterTodos()
+        public List<Cliente> ObterTodos()
         {
             return Produtos.ToList();
         }
 
-        public void Remover(Produto produto)
+        public void Remover(Cliente produto)
         {
             Produtos.Remove(produto);
         }

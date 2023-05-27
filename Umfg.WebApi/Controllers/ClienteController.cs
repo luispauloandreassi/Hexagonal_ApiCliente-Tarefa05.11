@@ -5,12 +5,12 @@ using Umfg.Dominio.Interfaces;
 namespace Umfg.WebApi.Controllers
 {
     [ApiController]
-    [Route("api/v2/produto")]
-    public class ProdutoController : ControllerBase
+    [Route("api/v2/cliente")]
+    public class ClienteController : ControllerBase
     {
-        private readonly IProdutoServico _servico;
+        private readonly IClienteServico _servico;
 
-        public ProdutoController(IProdutoServico servico)
+        public ClienteController(IClienteServico servico)
         {
             _servico = servico;
         }
@@ -19,11 +19,11 @@ namespace Umfg.WebApi.Controllers
         public IActionResult ObterTodos() => Ok(_servico.ObterTodos());
 
         [HttpPost]
-        public IActionResult Gravar([FromBody] Produto produto)
+        public IActionResult Gravar([FromBody] Cliente cliente)
         {
             try
             {
-                return Ok(_servico.Gravar(produto));
+                return Ok(_servico.Gravar(cliente));
             }
             catch (Exception ex)
             {

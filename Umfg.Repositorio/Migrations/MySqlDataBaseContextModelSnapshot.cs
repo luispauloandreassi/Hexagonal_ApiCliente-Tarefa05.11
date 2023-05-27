@@ -19,7 +19,7 @@ namespace Umfg.Repositorio.Migrations
                 .HasAnnotation("ProductVersion", "7.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Umfg.Dominio.Entidades.Produto", b =>
+            modelBuilder.Entity("Umfg.Dominio.Entidades.Cliente", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -27,26 +27,39 @@ namespace Umfg.Repositorio.Migrations
                         .HasColumnName("ID")
                         .HasAnnotation("Relational:JsonPropertyName", "id");
 
-                    b.Property<string>("CodigoBarra")
-                        .IsRequired()
+                    b.Property<string>("Documento")
                         .HasColumnType("longtext")
-                        .HasColumnName("CD_BARRA")
-                        .HasAnnotation("Relational:JsonPropertyName", "codigoBarra");
+                        .HasColumnName("DOCUMENTO")
+                        .HasAnnotation("Relational:JsonPropertyName", "documento");
 
-                    b.Property<string>("Descricao")
-                        .IsRequired()
+                    b.Property<string>("Nome")
                         .HasColumnType("longtext")
-                        .HasColumnName("DS_PRODUTO")
-                        .HasAnnotation("Relational:JsonPropertyName", "descricao");
+                        .HasColumnName("NOME")
+                        .HasAnnotation("Relational:JsonPropertyName", "nome");
 
-                    b.Property<decimal>("Valor")
-                        .HasColumnType("decimal(18,2)")
-                        .HasColumnName("VL_PRODUTO")
-                        .HasAnnotation("Relational:JsonPropertyName", "valor");
+                    b.Property<string>("Endereco")
+                        .HasColumnType("longtext")
+                        .HasColumnName("ENDERECO")
+                        .HasAnnotation("Relational:JsonPropertyName", "endereco");
+
+                    b.Property<string>("Celular")
+                        .HasColumnType("longtext")
+                        .HasColumnName("CELULAR")
+                        .HasAnnotation("Relational:JsonPropertyName", "celular");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("longtext")
+                        .HasColumnName("EMAIL")
+                        .HasAnnotation("Relational:JsonPropertyName", "email");
+
+                    b.Property<string>("Observacao")
+                        .HasColumnType("longtext")
+                        .HasColumnName("OBSERVACAO")
+                        .HasAnnotation("Relational:JsonPropertyName", "observacao");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Produto");
+                    b.ToTable("Cliente");
                 });
 #pragma warning restore 612, 618
         }

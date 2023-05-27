@@ -15,11 +15,11 @@ namespace Umfg.IoC
         public static void Dependecy(ref Container container)
         {
             container
-                .Register<IProdutoRepositorio, ProdutoRepositorio>(Lifestyle.Singleton);
+                .Register<IClienteRepositorio, ClienteRepositorio>(Lifestyle.Singleton);
 
             container.Register<IUnitOfWork, UnitOfWork>(Lifestyle.Singleton);
 
-            container.Register<IProdutoServico, ProdutoServico>(Lifestyle.Singleton);
+            container.Register<IClienteServico, ClienteServico>(Lifestyle.Singleton);
         }
     }
 }

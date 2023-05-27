@@ -8,7 +8,7 @@ namespace Umfg.Dominio.Interfaces
 {
     public interface IUnitOfWork
     {
-        IProdutoRepositorio ProdutoRepositorio { get; }
+        IClienteRepositorio ClienteRepositorio { get; }
 
         void SaveChanges();
     }
